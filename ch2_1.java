@@ -1,8 +1,8 @@
-//寻找13号星期五
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
 
+//寻找13号星期五
 public class ch2_1{
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);
@@ -21,7 +21,7 @@ public class ch2_1{
 		while(k<n) { // 循环控制年份
 			for (int i=0; i<12; i++){ // 循环控制月份
 				Cal.set(year,i,13); //设置日期
-				if (5==(Cal.get(Calendar.DAY_OF_WEEK)-1)) { //判断13日是否是星期五
+				if (6==(Cal.get(Calendar.DAY_OF_WEEK))) { //判断13日是否是星期五，星期日为第一天
 					System.out.println("黑色星期五:"+sdf.format(Cal.getTime())); //格式化输出日期
 				}
 			}
